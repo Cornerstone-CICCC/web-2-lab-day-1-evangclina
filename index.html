@@ -8,7 +8,38 @@
 </head>
 <body>
   <!-- YOUR CODE HERE -->
-  
+  <header>
+    <nav>
+      <form action="index.html" enctype="multipart/form-data" id="form">
+        <input type="text" name="city" id="city" autocomplete="off" placeholder="Enter the city name!!!!!!!">
+        <button class="button" type="submit">Search</button>
+      </form>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 class="city"></h1>
+    <h2 class="temp"></h2>
+  </div>
+  <div class="table">
+    <table>
+      <tr>
+        <td class="country-title bold"></td>
+        <td class="country"></td>
+      </tr>
+      <tr>
+        <td class="timezone-title bold"></td>
+        <td class="timezone"></td>
+      </tr>
+      <tr>
+        <td class="population-title bold"></td>
+        <td class="population"></td>
+      </tr>
+      <tr>
+        <td class="forecast-title bold"></td>
+        <td class="forecast"></td>
+      </tr>
+    </table>
+  </div>
   <script src="./app.js"></script>
 </body>
 </html>

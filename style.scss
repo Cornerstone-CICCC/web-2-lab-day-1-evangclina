@@ -1,0 +1,110 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    header{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        nav{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            input{
+                width: 280px;
+                height: 25px;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding-left: 5px;
+                &:-internal-autofill-selected{
+                    background-color: white; 
+                }
+            }
+            button{
+                margin-left: 10px;
+                height: 25px;
+                width: 60px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .container{
+        display: flex; 
+        align-items: end;
+        justify-content: space-around;
+        padding: 0 7% 5% 7%;
+
+        background-image: url("./images/day.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+        height: 50vh;
+        display: none;
+        
+        &.dark-bckg{
+            background-image: url("./images/night.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            object-fit: cover;
+            height: 50vh;
+        }
+    }
+    .table{
+        display: flex; 
+        padding-top: 30px;
+        align-items: center;
+        justify-content: center;
+        display: none; 
+        table{
+            border-collapse: collapse;
+            tr{
+                td{
+                    border: 1px solid rgb(104, 104, 104);
+                    padding: 10px;
+                }
+                .bold{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &.dark-mode{
+        background-color: rgb(20, 20, 20);
+        header{
+            nav{
+                input{
+                    color: white; 
+                    border: 2px solid white; 
+                    background-color: rgb(20, 20, 20);
+                }
+                button{
+                    background-color: rgb(20, 20, 20);
+                    color: white;
+                    border: 2px solid white; 
+                }
+            }
+        }
+        .container{
+            color:white;
+        }
+        .table{
+            color: white;
+            table{
+                tr{
+                    tr{
+                        border: 1px solid white; 
+                    }
+                }
+            }
+        }
+    }
+}
